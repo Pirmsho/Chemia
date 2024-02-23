@@ -11,7 +11,11 @@ def products(request):
     return render(request, 'chemia_main/products.html', {'products': products})
 
 def product_detail(request, product_id):
-    return render(request, 'chemia_main/product_detail.html', {'product_id': product_id})
+    product = get_object_or_404(Product, pk=product_id)
+    return render(request, 'chemia_main/product_detail.html', {
+        'product_id': product_id,
+        'product': product,
+        })
 
 def about(request):
     return render(request, 'chemia_main/about.html')

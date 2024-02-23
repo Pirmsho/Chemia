@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>
+            {% block title %}Base Title{% endblock %}
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="{% static 'chemia_main/base.css' %}"
+        />
+    </head>
+    <body>
+        <header>
+            <nav class="header_flex">
+                <div class="logo_div">
+                    <div class="main_texts">
+                        <p>Handcraft</p>
+                        <p>leather</p>
+                        <p>products</p>
+                    </div>
+                    <div class="blue_line"></div>
+                    <img src="{% static 'images/logo_chemia.png' %}" alt="Chemia Logo" class="logo_image" >
+                    <a href="{% url 'chemia_main:index' %}" class="brand_name">CHEMIA</a>
+                </div>
+                <div class="nav_div">
+                    <ul class="nav_ul">
+                        <li><a href="{% url 'chemia_main:index' %}">Home</a></li>
+                        <li><a href="{% url 'chemia_main:products' %}">Products</a></li>
+                        <li><a href="{% url 'chemia_main:about' %}">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        {% block main %}{% endblock %}
+    </body>
+</html>

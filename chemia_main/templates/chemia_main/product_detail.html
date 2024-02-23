@@ -4,6 +4,13 @@
         <title>Product Detail</title>
     </head>
     <body>
-        <h1>Product Detail {{ product_id }}</h1>
+        <h1>{{ product.name }}</h1>
+        <p>{{ product.description }}</p>
+        <p>{{ product.price }}</p>
+        <p>{{ product.category }}</p>
+        <img
+            src="{{ product.image.url }}"
+            alt="{{ product.name }}"
+        />
     </body>
 </html>
