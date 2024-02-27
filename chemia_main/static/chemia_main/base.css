@@ -10,9 +10,24 @@ a {
     color: #fff;
 }
 
+
 /* actual css */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main_content {
+    flex: 1;
+}
+
+
 /* header styles */
 .header_flex {
+    position: relative;
+    z-index: 5;
     height: 232px;
     display: flex;
     justify-content: space-around;
@@ -69,7 +84,6 @@ a {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    margin-top: 20px;
     gap: 30px;
 }
 
@@ -79,4 +93,45 @@ a {
     font-weight: 400;
     color: #fff;
     cursor: pointer;
+}
+
+/* main content styles */
+
+
+
+/* footer styles */
+
+.footer_flex {
+    height: 210px;
+    background-color: #687E9C;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.footer_links ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.footer_links ul li {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+}
+
+.developed_by p {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #fff;
 }

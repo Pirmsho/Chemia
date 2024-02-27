@@ -1,0 +1,32 @@
+.banner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.banner img {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    margin-top: -150px;
+}
+
+.overlay {
+    width: 80%;
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'League Gothic', sans-serif;
+}
+
+.overlay h1 {
+    font-size: 122px;
+    font-weight: 400;
+}
+
+.overlay h2 {
+    font-size: 102px;
+    font-weight: 400;
+}

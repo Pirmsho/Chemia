@@ -1,2 +1,21 @@
 {% extends "chemia_main/base.html" %} {% load static %}
 {%block title %}Chemia{% endblock %}
+
+{% block link %} <link
+rel="stylesheet"
+href="{% static 'chemia_main/index.css' %}"
+/> {% endblock %}
+
+{% block main %}
+
+<section class="banner">
+    <img src="{% static 'images/banner_image.png' %}" alt="Natural Leather">
+    <div class="overlay">
+        <h1>Product made in Georgia</h1>
+        <h2>high quality leather</h2>
+    </div>
+</section>
+
+
+
+{% endblock %}

@@ -14,6 +14,7 @@
             rel="stylesheet"
             href="{% static 'chemia_main/base.css' %}"
         />
+        {% block link %} {% endblock %}
     </head>
     <body>
         <header>
@@ -37,6 +38,25 @@
                 </div>
             </nav>
         </header>
-        {% block main %}{% endblock %}
+        <main class="main_content">
+            {% block main %}{% endblock %}
+        </main>
+        <footer class="footer_flex">
+            <div class="footer_links">
+                <ul>
+                    <li><a href="{% url 'chemia_main:index' %}">Home</a></li>
+                    <li><a href="{% url 'chemia_main:products' %}">Products</a></li>
+                    <li><a href="{% url 'chemia_main:about' %}">About</a></li>
+                </ul>
+            </div>
+            <div class="developed_by">
+                <p>developed by CERBERUS @2024</p>
+            </div>
+        </footer>
     </body>
 </html>
+
+
+<!-- 
+
+-->
