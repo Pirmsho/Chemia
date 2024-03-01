@@ -38,6 +38,12 @@ body {
     gap: 40px;
 }
 
+.header_flex:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+
 .logo_div {
     display: flex;
     justify-content: center;
@@ -59,7 +65,14 @@ body {
     align-items: right;
     color: #E9B26F;
     line-height: 62.4px;
+    cursor:default;
 }
+
+.main_texts p:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 
 .blue_line {
     width: 7px;
@@ -72,6 +85,13 @@ body {
     font-family: 'League Gothic', sans-serif;
     font-weight: 400;
     font-size: 102px;
+    color: #fff;
+    transition:  0.5s;
+}
+
+.brand_name:hover {
+    color: #FCDC5A;
+    transform: scale(1.05);
 }
 
 .logo_image {
@@ -84,7 +104,7 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    gap: 30px;
+    gap: 40px;
 }
 
 .nav_ul li {
@@ -93,7 +113,15 @@ body {
     font-weight: 400;
     color: #fff;
     cursor: pointer;
+    transition: 0.3s;
 }
+
+.nav_ul li:hover { 
+    color: #FCDC5A;
+    transform: scale(1.05);
+}
+
+
 
 /* main content styles */
 
