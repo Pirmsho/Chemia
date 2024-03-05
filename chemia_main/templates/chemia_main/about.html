@@ -1,11 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    <h1>About</h1>
-</body>
-</html>
+{% extends "chemia_main/base.html" %} {% load static %}
+{%block title %}About{% endblock %} {% block link %}
+<link
+    rel="stylesheet"
+    href="{% static 'chemia_main/about.css' %}"
+/>
+{% endblock %} {% block main %}
+<section class="company_info">
+    <header class="info_header">
+        <div class="line_start"></div>
+        <img
+            src="{% static 'images/Frame1.png' %}"
+            alt="leather tool"
+        />
+        <h2>Company info</h2>
+    </header>
+    <div class="info_first">
+        <div>
+            {% if language == 'en' %}
+            <p class="en">
+                "CHEMIA" brand started off in 2012, as an
+                experiment to see if we could create
+                something different from the everyday items
+                we see in stores everywhere. the idea was to
+                create a simple leather belt, which in the
+                end led to us creating 7 of them, each belt
+                more refined than the previous one. Today
+                "CHEMIA" brand creates products of our
+                original style, as well as collaborates with
+                corporate entities.
+            </p>
+            {% else %}
+            <p class="ka">
+                ჩემიას ბრენდი 2012 წელს შეიქმნა, როდესაც
+                გადავწყვიტეთ, რომ შეგვექმნა რაიმე
+                განსხვავებული იმისაგან, რასაც მაღაზიებში
+                ვხედავდით. გვინდოდა ერთი ქამრის გაკეთება,
+                მაგრამ ბოლოს 7 ცალი გავაკეთეთ, ყოველი
+                მათგანი წინაზე უკეთესი. დღესდღეობით ჩემიას
+                ბრენდი ემსახურება არამარტო ორიგინალი სტილის
+                მეძებარს, არამედ კორპორაციებსაც.
+            </p>
+            {% endif %}
+        </div>
+        <img
+            src="{% static 'images/info_image1.png' %}"
+            alt="working process"
+        />
+    </div>
+    <div class="info_second">
+        <img
+            src="{% static 'images/info_image2.png' %}"
+            alt="working process"
+        />
+        <div>
+            {% if language == 'en' %}
+            <p class="en">
+                Our philosophy is to leave everything
+                simple. Our products are classic, functional
+                and durable. They can be used in any
+                situation, from business meetings to
+                mountain hiking. All products are made in
+                Georgia.
+            </p>
+            {% else %}
+            <p class="ka">
+                ჩვენი ფილოსოფია არის რომ დავტოვოთ ყველაფერი
+                მარტივად. ჩვენი პროდუქტი კი არის კლასიკური,
+                ფუნქციური და გამძლე. ისინი შეგიძლიათ
+                გამოიყენოთ ნებისმიერ ვითარებაში, დაწყებული
+                ბიზნეს შეხვედრებიდან, დამთავრებული მთაში
+                მოგზაურობით. ყველა პროდუქტი იწარმოება
+                საქართველოში.
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

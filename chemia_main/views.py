@@ -4,19 +4,27 @@ from django.http import HttpResponse
 from .models import Product, Category 
 
 def index(request):
-    return render(request, 'chemia_main/index.html')
+    language = request.GET.get('lang', 'en')
+    return render(request, 'chemia_main/index.html', {'language': language})
 
 def products(request):
+    language = request.GET.get('lang', 'en')
     products = get_list_or_404(Product)
-    return render(request, 'chemia_main/products.html', {'products': products})
+    return render(request, 'chemia_main/products.html', {'products': products,
+                                                         'language': language})
 
 def product_detail(request, product_id):
+    language = request.GET.get('lang', 'en')
     product = get_object_or_404(Product, pk=product_id)
     return render(request, 'chemia_main/product_detail.html', {
         'product_id': product_id,
         'product': product,
+        'language': language,
         })
 
 def about(request):
-    return render(request, 'chemia_main/about.html')
+    language = request.GET.get('lang', 'en')
+    return render(request, 'chemia_main/about.html', {
+        'language': language,
+    })
 

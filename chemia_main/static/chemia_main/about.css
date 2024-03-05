@@ -1,0 +1,94 @@
+/* company info css */
+
+.company_info {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.info_header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'League Gothic', sans-serif;
+    gap: 15px;
+}
+
+.line_start {
+    width: 535px;
+    height: 19px;
+    background-color: #26436B;
+}
+
+.info_header img {
+    width: 38px;
+    height: 83px;
+}
+
+.info_header h2 {
+    font-size: 102px;
+    font-weight: 400;
+}
+
+.info_first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.info_first img {
+    width: 555px;
+    height: 370px;
+}
+
+.info_first div {
+    width: 562px;
+    height: 398px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* normal text georgian */
+
+.ka {
+    font-family: 'Babuka';
+    font-size: 24px;
+    line-height: 36px;
+}
+
+/* normal text english */
+
+.en {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 36px;
+    font-weight: 200;
+    cursor: default;
+    line-height: 45px;
+}
+
+.info_second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.info_second img {
+    width: 555px;
+    height: 337px;
+}
+
+.info_second div {
+    width: 584px;
+    height: 315px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Babuka';
+    font-size: 24px;
+    line-height: 36px;
+}
+

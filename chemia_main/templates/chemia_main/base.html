@@ -26,7 +26,9 @@
                         <p>products</p>
                     </div>
                     <div class="blue_line"></div>
-                    <img src="{% static 'images/logo_chemia.png' %}" alt="Chemia Logo" class="logo_image" >
+                    <a href="{% url 'chemia_main:index' %}">
+                        <img src="{% static 'images/logo_chemia.png' %}" alt="Chemia Logo" class="logo_image" >
+                    </a>
                     <a href="{% url 'chemia_main:index' %}" class="brand_name">CHEMIA</a>
                 </div>
                 <div class="nav_div">
@@ -51,6 +53,10 @@
             </div>
             <div class="developed_by">
                 <p>developed by CERBERUS @2024</p>
+            </div>
+            <div class="languages">
+                <a href="?lang=en">English</a>
+                <a href="?lang=ka">Georgian</a>  
             </div>
         </footer>
     </body>
