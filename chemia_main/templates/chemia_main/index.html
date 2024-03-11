@@ -1,15 +1,16 @@
 {% extends "chemia_main/base.html" %} {% load static %}
-{%block title %}Chemia{% endblock %}
+{%block title %}Chemia{% endblock %} {% block link %}
+<link
+    rel="stylesheet"
+    href="{% static 'chemia_main/index.css' %}"
+/>
+{% endblock %} {% block main %}
 
-{% block link %} <link
-rel="stylesheet"
-href="{% static 'chemia_main/index.css' %}"
-/> {% endblock %}
-
-{% block main %}
-      
 <section class="banner">
-    <img src="{% static 'images/banner_image.png' %}" alt="Natural Leather">
+    <img
+        src="{% static 'images/banner_image.png' %}"
+        alt="Natural Leather"
+    />
     <div class="image_overlay"></div>
     <div class="overlay">
         <h1>Product made in Georgia</h1>
@@ -17,10 +18,40 @@ href="{% static 'chemia_main/index.css' %}"
     </div>
 </section>
 
-
-
-
+<section class="main_info">
+    <div class="frame">
+        <div class="gold_line"></div>
+        <img
+            src="{% static 'images/Frame_banner.png' %}"
+            alt="dividing frame"
+        />
+        <div class="gold_line"></div>
+    </div>
+    <div class="chemia_main_info">
+        <div>
+            <p class="top_info">
+                Chemia brand was founded in 2012, after
+                which it offers customers the highest
+                quality handmade leather products. Our
+                artisans craft our products from the highest
+                quality leather, giving us a result that is
+                both durable and distinctive.
+            </p>
+        </div>
+        <img
+            src="{% static 'images/chemia_info_image.png' %}"
+            alt="leatherwork process"
+        />
+        <div>
+            <p class="bottom_info">
+                Experience the luxury of owning a handmade
+                pattern where every detail is tailored to
+                you. Whether you're looking for an accessory
+                or a gift, our collection offers unmatched
+                quality and style.
+            </p>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
-
-
