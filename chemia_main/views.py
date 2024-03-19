@@ -10,8 +10,10 @@ def index(request):
 def products(request):
     language = request.GET.get('lang', 'en')
     products = get_list_or_404(Product)
+    categories = get_list_or_404(Category)
     return render(request, 'chemia_main/products.html', {'products': products,
-                                                         'language': language})
+                                                         'language': language,
+                                                         'categories': categories,})
 
 def product_detail(request, product_id):
     language = request.GET.get('lang', 'en')

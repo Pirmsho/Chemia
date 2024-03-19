@@ -49,7 +49,7 @@
     opacity: 0;
 }
 
-.image_overlay:hover + .overlay {
+.image_overlay:hover+.overlay {
     top: 50%;
     left: 50%;
     opacity: 1;
@@ -64,7 +64,7 @@
 .overlay h2 {
     font-size: 102px;
     font-weight: 400;
-    
+
 }
 
 
@@ -91,7 +91,7 @@
 .gold_line {
     background-color: #E9B26F;
     height: 4px;
-    width: 25%;
+    width: 26%;
 }
 
 .frame img {
@@ -119,4 +119,96 @@
     font-weight: 400;
     font-size: 50px;
     text-align: start;
+}
+
+/* category section styles */
+
+.categories {
+    background-color: #0E1A28;
+}
+
+.category_horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.category_vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.category_vertical img {
+    border-radius: 10px;
+}
+
+.category_vertical .divider_gold {
+    background-color: #E9B26F;
+    height: 8px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category_vertical p {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #fff;
+}
+
+/* reviews styling */
+
+.custom_orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.custom_orders .custom_text {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+}
+
+.custom_orders span {
+    color: #E9B26F;
+}
+
+.review_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #26436B;
+    border-radius: 5%;
+    font-family: 'Babuka', sans-serif;
+    color: #fff;
+}
+
+.review_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.reviewer_name {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.actual_review {
+    font-size: 24px;
+    text-align: center;
+    line-height: 32px;
 }
