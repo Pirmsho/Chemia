@@ -53,9 +53,10 @@
 /* normal text georgian */
 
 .ka {
-    font-family: 'Babuka';
-    font-size: 24px;
-    line-height: 36px;
+    /* font-family: 'Babuka'; */
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
 }
 
 /* normal text english */
@@ -90,5 +91,5 @@
     font-family: 'Babuka';
     font-size: 24px;
     line-height: 36px;
+    margin-top: 30px;
 }
-
