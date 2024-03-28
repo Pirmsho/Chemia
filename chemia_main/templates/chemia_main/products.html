@@ -9,9 +9,16 @@
 
 {% block main %}
 
-<section class="products_banner">
-    <img src="{% static 'images/banner_image' %}" alt="Products Banner">
-    
+<section class="products">
+    {% for product in products %}
+    <div class="product_item">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        <p class="product_name">{{ product.name }}</p>
+        <p class="category">{{ product.category }}</p>
+        <p class="price">{{ product.price }}$</p>
+
+    </div>
+    {% endfor %}
 </section>
 
 {% endblock main %}
@@ -19,7 +26,7 @@
 
 
 
-{% comment %} <h1>Products Page</h1>
+<!-- {% comment %} <h1>Products Page</h1>
 {% for product in products %}
     <h2>{{ product.name }}</h2>
     <img
@@ -29,4 +36,4 @@
     <p>{{ product.category }}</p>
     <p>{{ product.description }}</p>
     <p>{{ product.price }}</p>
-{% endfor %} {% endcomment %}
+{% endfor %} {% endcomment %} -->

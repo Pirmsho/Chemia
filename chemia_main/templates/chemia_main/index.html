@@ -56,21 +56,27 @@
 
 <section class="categories">
     <div class="category_horizontal">
-        <div class="category_vertical">
-            <img src="{% static 'images/leather_wallet.png' %}" alt="leather wallets">
-            <div class="divider_gold"></div>
-            <p class="category_name">Leather Wallets</p>
-        </div>
-        <div class="category_vertical">
-            <img src="{% static 'images/leather_bag.png' %}" alt="leather bags">
-            <div class="divider_gold"></div>
-            <p class="category_name">Leather Bags</p>
-        </div>
-        <div class="category_vertical">
-            <img src="{% static 'images/leather_belt.png' %}" alt="leather belts">
-            <div class="divider_gold"></div>
-            <p class="category_name">Leather Belts</p>
-        </div>
+        <a href="{% url 'chemia_main:products_by_category' wallets %}">
+            <div class="category_vertical">
+                <img src="{% static 'images/leather_wallet.png' %}" alt="leather wallets">
+                <div class="divider_gold"></div>
+                <p class="category_name">Leather Wallets</p>
+            </div>
+        </a>
+        <a href="{% url 'chemia_main:products_by_category' bags %}">
+            <div class="category_vertical">
+                <img src="{% static 'images/leather_bag.png' %}" alt="leather bags">
+                <div class="divider_gold"></div>
+                <p class="category_name">Leather Bags</p>
+            </div>
+        </a>
+        <a href="{% url 'chemia_main:products_by_category' belts  %}">
+            <div class="category_vertical">
+                <img src="{% static 'images/leather_belt.png' %}" alt="leather belts">
+                <div class="divider_gold"></div>
+                <p class="category_name">Leather Belts</p>
+            </div>
+        </a> 
     </div>
 </section>
 

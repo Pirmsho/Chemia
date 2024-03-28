@@ -1,0 +1,32 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 500px;
+    gap: 30px;
+    margin: 50px auto;
+    width: 90%;
+
+}
+
+.product_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    /* padding: 0 10px; */
+}
+
+.product_item img {
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+}
+
+.product_name,
+.price,
+.category {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
