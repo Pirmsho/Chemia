@@ -7,15 +7,16 @@
 {% endblock %} {% block main %}
 <section class="company_info">
     <header class="info_header">
-        <div class="line_start"></div>
+        <div class="line_start" data-aos="fade-right" data-aos-delay="400"></div>
         <img
             src="{% static 'images/Frame1.png' %}"
             alt="leather tool"
+            data-aos="fade-right" data-aos-delay="200" 
         />
-        <h2>Company info</h2>
+        <h2 data-aos="fade-right">Company info</h2>
     </header>
     <div class="info_first">
-        <div>
+        <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="600">
             {% if language == 'en' %}
             <p class="en">
                 Chemia handmade products - started in 2012, in the corner of Nika's dining table.
@@ -30,7 +31,7 @@
             </p>
             {% else %}
             <p class="ka">
-                Chemia handmade products - დაიწყო  2012 წელს, ნიკას ს სასადილო მაგიდის კუთხეში. 
+                Chemia handmade products - დაიწყო  2012 წელს, ნიკას სასადილო მაგიდის კუთხეში. 
                 მაშინ ეს მხოლოდ ექსპერიმენტი იყო იმის დასანახად, შეეძლო თუ არა ნიკას მარტივი ქამრის 
                 დამზადება. Ერთის გაკეთების ნაცვლად, მან გააკეთა ექვსი ან შვიდი - თითოეული გამეორება 
                 სულ უფრო და უფრო უმჯობესდებოდა. Სულ მალე სხვებიც სთხოვდნენ ნიკას ნივთებს: ქამრებს, 
@@ -45,14 +46,21 @@
         <img
             src="{% static 'images/info_image1.png' %}"
             alt="working process"
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="600"
         />
     </div>
     <div class="info_second">
         <img
             src="{% static 'images/info_image2.png' %}"
             alt="working process"
+            data-aos="fade-right" data-aos-delay="300" data-aos-duration="600"
         />
-        <div>
+        <div data-aos="fade-left"
+        data-aos-delay="300"
+        data-aos-duration="600"
+        >
             {% if language == 'en' %}
             <p class="en">
                 Although our activities are focused on creating different and individual products 

@@ -10,6 +10,10 @@ a {
     color: #fff;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
 
 /* actual css */
 
@@ -17,18 +21,21 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
 }
 
 .main_content {
+    width: 100%;
     flex: 1;
 }
 
 
 /* header styles */
 .header_flex {
+    width: 100%;
     position: relative;
     z-index: 5;
-    height: 232px;
+    /* height: 232px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -36,7 +43,12 @@ body {
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
     gap: 40px;
+    padding: 40px 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
 }
+
+
 
 .header_flex:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
@@ -49,6 +61,58 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.burger-menu {
+    display: none;
+    /* Initially hide the burger menu button */
+    cursor: pointer;
+}
+
+.bar {
+    width: 80px;
+    height: 10px;
+    background-color: #E9B26F;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .header_flex {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .head_divider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .burger-menu {
+        display: block;
+        /* Show the burger menu button */
+    }
+
+    .nav_div {
+        display: none;
+        /* Hide the navigation menu by default */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Show the navigation menu when burger menu is clicked */
+    .nav_div.active {
+        display: block;
+    }
+
+    .nav_div.active ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .main_texts {
@@ -65,7 +129,7 @@ body {
     align-items: right;
     color: #E9B26F;
     line-height: 62.4px;
-    cursor:default;
+    cursor: default;
 }
 
 .main_texts p:hover {
@@ -86,7 +150,7 @@ body {
     font-weight: 400;
     font-size: 102px;
     color: #fff;
-    transition:  0.5s;
+    transition: 0.5s;
 }
 
 .brand_name:hover {
@@ -116,7 +180,7 @@ body {
     transition: 0.3s;
 }
 
-.nav_ul li:hover { 
+.nav_ul li:hover {
     color: #FCDC5A;
     transform: scale(1.05);
 }
@@ -130,36 +194,51 @@ body {
 /* footer styles */
 
 .footer_flex {
-    height: 210px;
+    /* height: 210px; */
     background-color: #687E9C;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 50px;
+    padding: 30px;
     margin-top: 50px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.socials img {
+    width: 80px;
+    height: 80px;
 }
 
 .footer_links ul {
     display: flex;
+
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    gap: 20px;
+    gap: 40px;
 }
 
 .footer_links ul li {
     font-family: 'League Gothic', sans-serif;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 400;
     color: #fff;
     cursor: pointer;
 }
 
-.developed_by p {
+.languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     font-family: 'League Gothic', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: #fff;
+    font-size: 36px;
+    margin-top: 20px;
 }

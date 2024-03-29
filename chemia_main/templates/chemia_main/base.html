@@ -14,22 +14,31 @@
             rel="stylesheet"
             href="{% static 'chemia_main/base.css' %}"
         />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         {% block link %} {% endblock %}
     </head>
     <body>
         <header>
             <nav class="header_flex">
-                <div class="logo_div">
-                    <div class="main_texts">
-                        <p>Handcraft</p>
-                        <p>leather</p>
-                        <p>products</p>
+                <div class="head_divider">
+                    <div class="logo_div">
+                        <div class="main_texts">
+                            <p>Handcraft</p>
+                            <p>leather</p>
+                            <p>products</p>
+                        </div>
+                        <div class="blue_line"></div>
+                        <a href="{% url 'chemia_main:index' %}">
+                            <img src="{% static 'images/logo_chemia.png' %}" alt="Chemia Logo" class="logo_image" >
+                        </a>
+                        <a href="{% url 'chemia_main:index' %}" class="brand_name">CHEMIA</a>
                     </div>
-                    <div class="blue_line"></div>
-                    <a href="{% url 'chemia_main:index' %}">
-                        <img src="{% static 'images/logo_chemia.png' %}" alt="Chemia Logo" class="logo_image" >
-                    </a>
-                    <a href="{% url 'chemia_main:index' %}" class="brand_name">CHEMIA</a>
+                    <div class="burger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+
                 </div>
                 <div class="nav_div">
                     <ul class="nav_ul">
@@ -44,21 +53,33 @@
             {% block main %}{% endblock %}
         </main>
         <footer class="footer_flex">
-            <div class="footer_links">
-                <ul>
-                    <li><a href="{% url 'chemia_main:index' %}">Home</a></li>
-                    <li><a href="{% url 'chemia_main:products' %}">Products</a></li>
-                    <li><a href="{% url 'chemia_main:about' %}">About</a></li>
-                </ul>
+            <div class="socials">
+                <a href="" class="social_link" target="_blank">
+                    <img src="{% static 'images/insta.png' %}" alt="Instagram logo">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61555866057570" class="social_link" target="_blank">
+                    <img src="{% static 'images/facebook.png' %}" alt="Facebook Logo">
+                </a>
             </div>
-            <div class="developed_by">
-                <p>developed by CERBERUS @2024</p>
-            </div>
-            <div class="languages">
-                <a href="?lang=en">English</a>
-                <a href="?lang=ka">Georgian</a>  
+            <div>
+                <div class="footer_links">
+                    <ul>
+                        <li><a href="{% url 'chemia_main:index' %}">Home</a></li>
+                        <li><a href="{% url 'chemia_main:products' %}">Products</a></li>
+                        <li><a href="{% url 'chemia_main:about' %}">About</a></li>
+                    </ul>
+                </div>
+                <div class="languages">
+                    <a href="?lang=en">English</a>
+                    <a href="?lang=ka">Georgian</a>  
+                </div>
             </div>
         </footer>
+        <script src="{% static 'chemia_main/js/base.js' %}"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
 
