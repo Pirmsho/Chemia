@@ -69,10 +69,14 @@
                         <li><a href="{% url 'chemia_main:about' %}">About</a></li>
                     </ul>
                 </div>
-                <div class="languages">
-                    <a href="?lang=en">English</a>
-                    <a href="?lang=ka">Georgian</a>  
-                </div>
+            </div>
+            <div class="languages">
+                <a href="?lang=en">
+                    <img src="{% static 'images/UK.svg.png' %}" alt="UK flag">
+                </a>
+                <a href="?lang=ka">
+                    <img src="{% static 'images/Georgia.svg.png' %}" alt="Georgian flag">
+                </a>  
             </div>
         </footer>
         <script src="{% static 'chemia_main/js/base.js' %}"></script>

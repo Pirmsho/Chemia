@@ -30,6 +30,7 @@
     </div>
     <div class="chemia_main_info">
         <div>
+            {% if language == 'en' %}
             <p class="top_info">
                 Chemia brand was founded in 2012, after
                 which it offers customers the highest
@@ -38,6 +39,11 @@
                 quality leather, giving us a result that is
                 both durable and distinctive.
             </p>
+            {% else %}
+            <p class="ka_index">
+                Ჩემიას ბრენდი დაფუძნდა 2012 წელს, რის შემდეგაც მომხმარებლებს სთავაზობს უმაღლესი ხარისხის ტყავის ხელნაკეთ პროდუქციას. Ჩვენი ოსტატები ამზადებენ ჩემიას პროდუქციას უმაღლესი ხარისხის ტყავისგან, რაც გვაძლევს შედეგს რომელიც არის როგორც გამძლე, ასევე განსხვავებული. 
+            </p>
+            {% endif %}
         </div>
         <img
             src="{% static 'images/chemia_info_image.png' %}"
@@ -45,6 +51,7 @@
             data-aos="flip-up"
         />
         <div>
+            {% if language == 'en' %}
             <p class="bottom_info">
                 Experience the luxury of owning a handmade
                 pattern where every detail is tailored to
@@ -52,6 +59,11 @@
                 or a gift, our collection offers unmatched
                 quality and style.
             </p>
+            {% else %}
+            <p class="ka_index">
+                განიცადეთ ხელნაკეთი ნიმუშის ფლობის ფუფუნება, სადაც თითოეული დეტალი თქვენზეა მორგებული. მიუხედავად იმისა, ეძებთ აქსესუარს თუ საჩუქარს, ჩვენი კოლექცია გთავაზობთ შეუდარებელ ხარისხს და სტილს.
+            </p>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -135,8 +147,11 @@
     <div class="contact_info">
         <div class="contact_item">
             <img src="{% static 'images/phone_logo.png' %}" alt="phone logo">
-            <p>+995 599 89 77 44</p>
+            <p class="phone">+995 599 89 77 44</p>
         </div>
+        <div class="contact_item">
+            <img src="{% static 'images/gps.png' %}" alt="">
+            <p class="address">აღმაშენებლის გამზირი 144. პარტერის ქუჩა 2.</p>
     </div>
 </section>
 

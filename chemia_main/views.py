@@ -60,3 +60,6 @@ def about(request):
         'language': language,
     })
 
+
+
+
