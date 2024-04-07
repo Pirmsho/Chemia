@@ -1,0 +1,97 @@
+/* category section styles */
+
+.categories {
+    margin-top: 80px;
+}
+
+.category_horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    gap: 50px;
+    padding: 50px 0;
+    color: #0E1A28;
+}
+
+.category_vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s ease;
+    padding: 0 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.category_vertical:hover {
+    transform: scale(1.1);
+
+}
+
+.category_vertical img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.category_vertical .divider_gold {
+    background-color: #E9B26F;
+    height: 8px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category_vertical p {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #0E1A28;
+}
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 500px;
+    gap: 30px;
+    margin: 50px auto;
+    width: 90%;
+}
+
+.product_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    /* padding: 0 10px; */
+}
+
+.product_item img {
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+}
+
+.product_name,
+.price,
+.category {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

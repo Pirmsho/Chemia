@@ -1,0 +1,339 @@
+@font-face {
+    font-family: 'Babuka';
+    src: url(babuka.ttf) format('truetype');
+}
+
+
+/* banner styles */
+
+.banner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.banner img {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    margin-top: -150px;
+}
+
+.image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image_overlay:hover {
+    opacity: 0.6;
+}
+
+
+.overlay {
+    width: 80%;
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+    color: white;
+    font-family: 'League Gothic', sans-serif;
+    text-align: center;
+    opacity: 0;
+}
+
+.image_overlay:hover+.overlay {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+
+.overlay h1 {
+    font-size: 122px;
+    font-weight: 400;
+}
+
+.overlay h2 {
+    font-size: 102px;
+    font-weight: 400;
+
+}
+
+
+.overlay h1 {
+    font-size: 122px;
+    font-weight: 400;
+}
+
+.overlay h2 {
+    font-size: 102px;
+    font-weight: 400;
+}
+
+
+/* dividing frame styles */
+
+.frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 70px;
+}
+
+.gold_line {
+    background-color: #E9B26F;
+    height: 4px;
+    width: 26%;
+}
+
+.frame img {
+    height: 63.8px;
+}
+
+
+
+/* main info styles */
+
+.chemia_main_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 80%;
+    margin: 70px auto;
+}
+
+.chemia_main_info img {
+    width: 100%;
+}
+
+.chemia_main_info p {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: start;
+}
+
+.ka_index {
+    font-family: 'Babuka', sans-serif;
+    font-size: 20px;
+    line-height: 65px;
+    font-weight: 400;
+    text-align: start;
+
+}
+
+/* category section styles */
+
+.categories {
+    background-color: #0E1A28;
+}
+
+.category_horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.category_vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s ease;
+    padding: 0 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.category_vertical:hover {
+    transform: scale(1.1);
+
+}
+
+.category_vertical img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.category_vertical .divider_gold {
+    background-color: #E9B26F;
+    height: 8px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.category_vertical p {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #fff;
+}
+
+/* reviews styling */
+
+.custom_orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.custom_orders .custom_text {
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+}
+
+.custom_orders span {
+    color: #E9B26F;
+    border-bottom: #E9B26F 6px solid;
+    animation: color-change 6s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: #E9B26F;
+    }
+
+    50% {
+        color: #ffa600;
+    }
+
+    100% {
+        color: #E9B26F;
+    }
+
+}
+
+.review_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #26436B;
+    border-radius: 5%;
+    font-family: 'Babuka', sans-serif;
+    color: #fff;
+}
+
+.review_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    gap: 20px;
+    padding: 30px 0;
+}
+
+.reviewer_name {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.actual_review {
+    font-size: 24px;
+    text-align: center;
+    line-height: 32px;
+}
+
+/* contact styles */
+
+.contact {
+    margin-top: 70px;
+}
+
+.contact_header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    font-family: 'League Gothic', sans-serif;
+}
+
+.contact_header .blue_line_index {
+    background-color: #26436B;
+    height: 14px;
+    width: 90px;
+}
+
+.contact_header p {
+    font-size: 102px;
+}
+
+.contact_info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.contact_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    border-bottom: #E9B26F 6px solid;
+    padding-bottom: 5px;
+    width: 70%;
+}
+
+.contact_item img {
+    width: 69px;
+    height: 69px;
+    overflow: auto;
+}
+
+.contact_item .phone {
+    font-size: 72px;
+    font-weight: 400;
+    font-family: 'League Gothic', sans-serif;
+}
+
+.address {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Babuka', sans-serif;
+
+}
+
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1200px) {
+    .gold_line {
+        width: 18%;
+    }
+
+    .image_overlay {
+        opacity: 0.2;
+    }
+
+    .image_overlay:hover {
+        opacity: 0.2;
+    }
+
+    .overlay {
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+    }
+}

@@ -11,11 +11,16 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
 from pathlib import Path
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-MEDIA_ROOT = ''
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = ''
 
 
@@ -23,12 +28,18 @@ MEDIA_URL = ''
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&xe2rkt=4^7y51_17fv0-@ud!28ifd%xj^r0bs$4cdq)l6k^zf'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
+# Secure-only csrf cookie 
+CSRF_COOKIE_SECURE = True
+
+# Ensure all HTTP requests are redirected to HTTPS
+SECURE_SSL_REDIRECT = True 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chemiaproducts.ge', 'www.chemiaproducts.ge', '127.0.0.1']
 
 
 # Application definition
